@@ -41,7 +41,7 @@ void inputCheck(char message[], char input[MAXSTRING], Location Map[]){//lookup 
                         if(condition == 0) break;
                 }
                 if(condition == 0) return;
-                printf("Invalid input. Try again. \n");
+                printf("\n  Invalid input. Try again. \n");
         }
 }
 
@@ -56,7 +56,7 @@ void printRoute(char *From, char *To, Location cities[]){
   	Location *origin; // Origin
 	if(strcmp(To,From) == 0){
         	destinationFound = 1;
-        	printf("\n You're at the destination, duh!\n");
+        	printf("\n  You're at the destination, duh!\n");
 		printf("\n");
         	return;
 	}
