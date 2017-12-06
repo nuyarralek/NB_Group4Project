@@ -1,7 +1,48 @@
 # Final Project for NB Foundation class
 
-
 ## Getting Started
+
+#### Running the program
+>Use make command. Program name is RouteFind.
+```c
+make
+./RunFile
+```
+
+#### Program output
+```c
+Hello!, please enter the origin:  Hillsboro
+
+ Please enter the destination:  Boring
+
+ Here is the route from Hillsboro to Boring:
+
+	Hillsboro    
+	Tanasbourne    
+	Beaverton    
+	Sylvan    
+	West Portland    
+	i5    
+	East Portland    
+	Gresham    
+	Boring    
+
+ Hello!, please enter the origin:  Boring
+
+	 Please enter the destination:  Tigard
+
+	  Invalid input. Try again.
+
+	 Please enter the destination:  Sandy 
+
+	 Here is the route from Boring to Sandy:
+
+		Boring    
+		Sandy    
+
+
+```
+
 This program helps you find the route between two cities from the following list of following cities:
 
 ["Sandy", "Boring", "Gresham", "East Portland", "i5", "West Portland", "Sylvan", "Beaverton", "Tanasbourne", "Hillsboro", "North Plains", "Mountaindale"]
@@ -61,7 +102,7 @@ void inputCheck (char message[], char input[15], Location [Map])//lookup struct 
 	int condition = 1;
 	while (condition !=0)
 	{
-		printf("\n %s, message); 
+		printf("\n %s, message);
 		fgets(input, 15, stdin);
 		input[strcspn(input, "\n")] = '\0';
 		for(int i = 0; i < 12; ++i)
@@ -101,7 +142,7 @@ Then we look for the destination:
       			if (strcmp(currentNode->name, To) == 0){
         			destinationFound = 1;
         			break;
-      			}	
+      			}
       			if(currentNode->east == NULL){
         			east = 1;
 				//Given destinationFound is 0, if it's an end node, this resets the route list
@@ -122,7 +163,7 @@ Then we look for the destination:
 
     		while(west == 0 && destinationFound == 0){
       			strcpy(route[w], currentNode->name);
-			totalCities += 1; 
+			totalCities += 1;
       			if (strcmp(currentNode->name, To) == 0){
         			destinationFound = 1;
         			break;
@@ -160,7 +201,7 @@ Hello!, please enter the origin:  Sandy
 Please enter the destination:  South Portland
 
 Here is the route from Sandy to South Portland
-Sandy	Boring	Gresham	East Portland	i5	South Portland	
+Sandy	Boring	Gresham	East Portland	i5	South Portland
 ```
 
 ### Tests
@@ -206,12 +247,12 @@ Hillsboro
 
 ```
 Hello!, please enter the origin:  Hillsbord
-Invalid input. Try again. 
+Invalid input. Try again.
 
  Hello!, please enter the origin:  Hillsboro   
 
  Please enter the destination:  Sandoops
-Invalid input. Try again. 
+Invalid input. Try again.
 
  Please enter the destination:  Sandy
 
