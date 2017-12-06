@@ -3,7 +3,7 @@
 ## Getting Started
 
 #### Running the program
->Use make command. Program name is RouteFind.
+>Use make command. Program name is RunFile.
 ```c
 make
 ./RunFile
